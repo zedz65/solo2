@@ -8,9 +8,15 @@ from random import randint
 
 #specify 2 numbers and it picks a random int between the 2
 @app.route('/generator/numbers', methods = ['GET'])
-def service3():
-    numbergen =  random.randint(100,999)
-    return str(numbergen)
+def sixdig():
+    sixnum =  random.randint(100000,999999)
+    return str(sixnum)
+@app.route('/generator/8numbers', methods = ['GET'])
+def eightdig():
+    eightnum = random.randint(10000000,99999999)
+    return str(eightnum)
 
-print(str(service3()))
+
+print(sixdig())
+print(eightdig())
 
