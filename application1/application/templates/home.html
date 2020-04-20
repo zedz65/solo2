@@ -2,9 +2,11 @@
 
 {% block body_content %}
 
-<h1>{{ accountref }}</h1>
+<h1> Account no:{{ three_lower }}{{ get_sixdig }} </h1>
 
-<a href='{{ url_for('prize') }}'>Generate Prize</a>
+<h3><a href="{{ url_for('prize') }}">To see if you have won a prize click here</a></h3>
+
+
 
 	
-{% endblock %}
+{% endblock body_content %}
