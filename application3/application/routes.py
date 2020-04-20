@@ -16,4 +16,3 @@ def get_eightdig():
 
 print(get_sixdig())
 print(get_eightdig())
-
