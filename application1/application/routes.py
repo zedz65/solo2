@@ -15,7 +15,7 @@ def accountref():
 @app.route('/prize', methods=['GET', 'POST'])
 def prize():
 
-   # three_lower = requests.post(‘http://application2:5003/generator/three_lower’, data= three_lower.text) it is posting back to container for service 4? #
-   # get_sixdig = requests.post(‘http://application3:5003/generator/get_sixdig’, data=get_sixdig.text)#
+    three_lower = requests.post('http://application2:5003/generator/three_lower', data= three_lower.text)
+    get_sixdig = requests.post('http://application3:5003/generator/get_sixdig', data=get_sixdig.text)
 
-    return render_template('prize.html', title='Prize')
+    return render_template('prize.html', title='Prize', three_lower=three_lower.text, get_sixdig=get_sixdig.text)
