@@ -21,7 +21,7 @@ def prizegen1():
         prize = "YOU ARE A WINNER!"
     else:
         prize = "Try again next time"
-    return Response(noise, mimetype= 'text/plain')
+    return Response(prize, mimetype= 'text/plain')
 
 def prizegen2():
     if accountnumber[3] == '1':

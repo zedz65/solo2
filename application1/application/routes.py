@@ -8,13 +8,12 @@ def home():
 
     three_lower = requests.get('http://application2:5001/generator/three_lower')	 
     get_sixdig = requests.get('http://application3:5002/generator/sixdig')
- 
-    return render_template('home.html', title='home', three_lower=three_lower.text, get_sixdig=get_sixdig.text) 
+    username = three_lower.text+str(get_sixdig.text)
+    return render_template('home.html', title='home', username=username) 
 
 
-@app.route('/prize', methods=['GET'])
-def prize():
-    three_lower = requests.get('http://application2:5001/generator/three_lower')
-    get_sixdig = requests.get('http://application3:5002/generator/sixdig')
-    return render_template('prize.html', title='prize', three_lower=three_lower.text, get_sixdig=get_sixdig.text)
+@app.route('/prize/<prizeusername>', methods=['GET', 'POST'])
+def prize(prizeusername):
+    prize = requests.post('http://application4:5003/prize', data=prizeusername)
+    return render_template('prize.html', title='prize', username=username.text, prize=prize.text)
 
