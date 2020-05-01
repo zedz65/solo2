@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.3'
 services:
   application1:
     build: ./application1
@@ -17,4 +17,10 @@ services:
     ports:
       - target: 5002
         published: 5002
+        protocol: tcp
+  application4:
+    build: ./application4
+    ports:
+      - target: 5003
+        published: 5003
         protocol: tcp
