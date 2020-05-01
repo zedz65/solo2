@@ -18,3 +18,9 @@ services:
       - target: 5002
         published: 5002
         protocol: tcp
+  application4:
+    build: ./application4
+    ports:
+      - target: 5003
+        published: 5003
+        protocol: tcp
