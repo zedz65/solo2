@@ -6,6 +6,7 @@ from random import randint
 #specify 2 numbers and it picks a random int between the 2
 @app.route('/prizeshort', methods = ['POST'])
 def prizeshort():
+    prizeusername = request.data.decode("utf-8")
     if prizeusername[0] == 'a':
         prize = "YOU ARE A WINNER!"
     elif prizeusername[0] == 'b':
@@ -24,6 +25,7 @@ def prizeshort():
 
 @app.route('/prizelong', methods = ['POST'])
 def prizelong():
+    prizeusername = request.data.decode("utf-8")
     if prizeusername[3] == '1':
         prize = "YOU ARE A WINNER!"
     elif prizeusername[3] == '2':

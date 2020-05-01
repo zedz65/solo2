@@ -2,9 +2,10 @@
 
 {% block body_content %}
 
-<h1> Your account number was ...{{ account_number }} </h1>
+<h1> Your account number was ...{{ prizeusername }} </h1>
 
-<a href="{{ url_for('home') }}">try again next time !</a>
+Your prize is ... {{ prize }}
+<a href="{{ url_for('home') }}">try again!</a>
 
 {% endblock body_content %}
 

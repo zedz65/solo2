@@ -14,6 +14,6 @@ def home():
 
 @app.route('/prize/<prizeusername>', methods=['GET', 'POST'])
 def prize(prizeusername):
-    prize = requests.post('http://application4:5003/prizeshort/<prizeusername>', data=username)
-    return render_template('prize.html', title='prize', prizeusername=username.text, prize=prize.text)
+    prize = requests.post('http://application4:5003/prizeshort/', data=prizeusername)
+    return render_template('prize.html', title='prize', prizeusername=prizeusername, prize=prize.text)
 
