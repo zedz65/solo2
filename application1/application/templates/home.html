@@ -1,9 +1,12 @@
 {% extends "layout.html" %}
 
 {% block body_content %}
-
-Account no: {{ username }}
-<h3><a href="{{ url_for('prize', prizeusername=username) }}">To see if you have won a prize click here</a></h3>
+<div class="container-fluid">
+	<h1>Welcome to the prize generator</h1>
+Your randomly generated account number is {{ username }}
+<br><br>
+<a href="{{ url_for('prize', prizeusername=username) }}" class="btn btn-info" role="button">Click to see your prize!</a>
+</div>
 
 
 
