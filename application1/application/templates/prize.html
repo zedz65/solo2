@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block body_content %}
+<div class="container-fluid">
+<h1> Your account number is ...{{ prizeusername }} </h1>
 
-<h1> Your account number was ...{{ prizeusername }} </h1>
-<br><br>
-Your prize is ... {{ prize }}
+	{{ prize }}<br><br>
 <a href="{{ url_for('home') }}">try again!</a>
-
+</div>
 {% endblock body_content %}
 
