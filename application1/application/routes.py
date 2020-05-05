@@ -15,6 +15,13 @@ def home():
 @app.route('/prize/<prizeusername>', methods=['GET', 'POST'])
 def prize(prizeusername):
     prize = requests.post('http://application4:5003/prizeshort', data=prizeusername)
-    user_data = prize(username=home.username, prize=prize)
+    user_data = Prize(username=home.username, prize=prize)
+    db.session.add(user_data)
+    db session.commit()
+        prizeData = Prizes(code =code, prize = prize, id = current_user.id)
+    db.session.add(prizeData)
+    db.session.commit()
+ 
+    
     return render_template('prize.html', title='prize', prizeusername=prizeusername, prize=prize.text)
 
