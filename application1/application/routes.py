@@ -1,4 +1,4 @@
-from application import app
+from application import app, db
 from flask import render_template, request, Response
 import requests
 
@@ -15,5 +15,6 @@ def home():
 @app.route('/prize/<prizeusername>', methods=['GET', 'POST'])
 def prize(prizeusername):
     prize = requests.post('http://application4:5003/prizeshort', data=prizeusername)
+    user_data = prize(username=home.username, prize=prize)
     return render_template('prize.html', title='prize', prizeusername=prizeusername, prize=prize.text)
 
