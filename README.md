@@ -25,7 +25,7 @@ The fourth and final service will allow us to create 2 versions of the applicati
 The output from service 2 and 3 will be concatenated to form one username/ account number. The backend will complete the logic to determine a prize and then this will be stored into a database along with a prize.
 
 ## Architecture
-
+![Arch](https://github.com/zedz65/solo2/blob/master/documentation/arch.png)
 Diagrams etc
 
 ## Diagrams:
@@ -57,12 +57,14 @@ WHAT WE DID RELATED TO ARCHITECTURE
 How we are going to deploy the app azure gcp docker swarm etc etc
 
 CI PIPELINE
-
-Pipeline diagram with our technologies used here
+![CI](https://github.com/zedz65/solo2/blob/master/documentation/cpipe.png)
+This is our CI Pipeline
 
 ### Testing
 
-For testing pytest add what we can
+For the Testing we conducted tests on the code and database using Pytest. Here are some of our Coverage Reports
+![coverage1](https://github.com/zedz65/solo2/blob/master/documentation/cov1.png)
+![coverage2](https://github.com/zedz65/solo2/blob/master/documentation/cov2.png)
 
 ### Technologies used:
 
@@ -74,11 +76,15 @@ Project tracking – Trello
 
 Testing – Pytest
 
-CI server – Jenkins
+CI server – Docker/CRON
 
 Docker / Docker Swarm 
 
 VM SQL – GCP
+
+Database - Mysql
+
+Source code - Python/html/css/Bootstrap
 
 ADD MORE TECHNOLOGIES HERE
 
