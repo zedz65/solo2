@@ -24,9 +24,15 @@ The fourth and final service will allow us to create 2 versions of the applicati
 
 The output from service 2 and 3 will be concatenated to form one username/ account number. The backend will complete the logic to determine a prize and then this will be stored into a database along with a prize.
 
+## Risk Assessment
+Initial Risk Assessment
+![Risk](https://github.com/zedz65/solo2/blob/master/documentation/risk1.png)
+
 ## Architecture
 ![Arch](https://github.com/zedz65/solo2/blob/master/documentation/arch.png)
-Diagrams etc
+
+Architecture V2
+![Arch2](https://github.com/zedz65/solo2/blob/master/documentation/updated%20architecture.png)
 
 ## Diagrams:
 
@@ -55,6 +61,8 @@ WHAT WE DID RELATED TO ARCHITECTURE
 ### Deployment
 
 How we are going to deploy the app azure gcp docker swarm etc etc
+DockerHub
+![docker](https://github.com/zedz65/solo2/blob/master/documentation/docker%20hub.png)
 
 CI PIPELINE
 ![CI](https://github.com/zedz65/solo2/blob/master/documentation/cpipe.png)
